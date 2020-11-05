@@ -12,7 +12,7 @@ export enum Step {
   providedIn: 'root',
 })
 export class MenuService {
-  steps = new BehaviorSubject<number>(Step.TYPE_OF_PLATE);
+  stepper = new BehaviorSubject<number>(Step.TYPE_OF_PLATE);
 
   typeOfPlates = new BehaviorSubject<TypeOfPlate[]>([
     { nombre: 'entrada' },

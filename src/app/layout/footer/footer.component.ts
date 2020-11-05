@@ -1,15 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { MenuService } from 'src/app/core/services/menu.service';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
 })
-export class FooterComponent implements OnInit {
-  index = 0;
-  status = false;
+export class FooterComponent implements OnInit, OnDestroy {
+  stepperSubscription: Subscription;
+  step;
 
-  constructor() {}
+  constructor(private menuService: MenuService) {
+    this.stepperSubscription = this.menuService.stepper.subscribe((step) => {
+      this.step = step;
+    });
+  }
 
   ngOnInit(): void {}
+
+  ngOnDestroy(): void {
+    this.stepperSubscription.unsubscribe();
+  }
 }
