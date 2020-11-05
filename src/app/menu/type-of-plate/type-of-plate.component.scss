@@ -1,0 +1,14 @@
+.type-of-plate {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
+.type-of-plate__image {
+  max-height: 300px;
+}

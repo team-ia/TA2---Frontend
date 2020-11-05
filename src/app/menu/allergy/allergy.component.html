@@ -1,0 +1,17 @@
+<div class="allergy">
+  <div *ngFor="let typeOfAllergy of typeOfAllergies">
+    <nz-divider [nzText]="typeOfAllergy.nombre"></nz-divider>
+    <carousel>
+      <div
+        class="carousel-cell"
+        *ngFor="let allergy of typeOfAllergy.allergies"
+        (click)="onClickAllergy(allergy)"
+      >
+        <h4 class="allergy__title-card">
+          {{ allergy.nombre }}
+        </h4>
+        <img [src]="allergy.imagen" />
+      </div>
+    </carousel>
+  </div>
+</div>

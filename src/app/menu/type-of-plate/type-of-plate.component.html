@@ -1,1 +1,14 @@
-<p>type-of-plate works!</p>
+<div class="type-of-plate">
+  <div
+    class="type-of-plate__card"
+    *ngFor="let typeOfPlate of typeOfPlates"
+    (click)="onClickTypeOfPlate(typeOfPlate)"
+  >
+    <nz-card nzHoverable [nzCover]="coverTemplate">
+      <nz-card-meta [nzTitle]="typeOfPlate.nombre"></nz-card-meta>
+    </nz-card>
+    <ng-template #coverTemplate>
+      <img class="type-of-plate__image" [src]="typeOfPlate.imagen" />
+    </ng-template>
+  </div>
+</div>

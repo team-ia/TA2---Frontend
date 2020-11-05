@@ -1,0 +1,17 @@
+<div class="disease">
+  <div *ngFor="let typeOfDisease of typeOfDiseases">
+    <nz-divider [nzText]="typeOfDisease.nombre"></nz-divider>
+    <carousel>
+      <div
+        class="carousel-cell"
+        *ngFor="let disease of typeOfDisease.diseases"
+        (click)="onClickDisease(disease)"
+      >
+        <h4 class="disease__title-card">
+          {{ disease.nombre }}
+        </h4>
+        <img [src]="disease.imagen" />
+      </div>
+    </carousel>
+  </div>
+</div>

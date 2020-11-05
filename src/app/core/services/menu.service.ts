@@ -19,18 +19,9 @@ export class MenuService {
   stepper = new BehaviorSubject<number>(Step.TYPE_OF_PLATE);
   stepSubscription: Subscription;
 
-  typeOfPlates = new BehaviorSubject<TypeOfPlate[]>([
-    { nombre: 'entrada' },
-    { nombre: 'bebidas' },
-  ]);
-  allergies = new BehaviorSubject<Allergy[]>([
-    { nombre: 'entrada' },
-    { nombre: 'bebidas' },
-  ]);
-  diseases = new BehaviorSubject<Disease[]>([
-    { nombre: 'entrada' },
-    { nombre: 'bebidas' },
-  ]);
+  typeOfPlates = new BehaviorSubject<TypeOfPlate[]>([]);
+  allergies = new BehaviorSubject<Allergy[]>([]);
+  diseases = new BehaviorSubject<Disease[]>([]);
 
   constructor(private router: Router) {
     this.stepSubscription = this.stepper.subscribe((step) => {

@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
+import { AllergyComponent } from './menu/allergy/allergy.component';
+import { DiseaseComponent } from './menu/disease/disease.component';
 import { TypeOfPlateComponent } from './menu/type-of-plate/type-of-plate.component';
 
 const routes: Routes = [
@@ -14,11 +16,11 @@ const routes: Routes = [
       },
       {
         path: 'enfermedades',
-        component: TypeOfPlateComponent,
+        component: DiseaseComponent,
       },
       {
         path: 'alergias',
-        component: TypeOfPlateComponent,
+        component: AllergyComponent,
       },
       {
         path: 'recomendacion',

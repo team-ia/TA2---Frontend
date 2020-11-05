@@ -1,14 +1,14 @@
 [
   {
-    "nombre": "Entrada",
+    "nombre": "Piña",
     "imagen": "https://picsum.photos/200/200"
   },
   {
-    "nombre": "Postre",
+    "nombre": "Limón",
     "imagen": "https://picsum.photos/200/200"
   },
   {
-    "nombre": "Bebida",
+    "nombre": "Pollo",
     "imagen": "https://picsum.photos/200/300"
   }
 ]
