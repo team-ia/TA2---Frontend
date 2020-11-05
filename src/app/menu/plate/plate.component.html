@@ -2,7 +2,11 @@
   <nz-divider class="plate__title-cards" nzText="Tipo de Platos"></nz-divider>
 
   <div class="plate__cards">
-    <div class="plate__card" *ngFor="let plate of plates">
+    <div
+      class="plate__card"
+      *ngFor="let plate of plates"
+      (click)="onClickPlateSelection(plate)"
+    >
       <nz-card nzHoverable [nzCover]="coverTemplate">
         <nz-card-meta
           class="plate__title-card"

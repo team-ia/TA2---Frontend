@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Allergy } from 'src/app/core/models/allergy.model';
 import { Disease } from 'src/app/core/models/disease.model';
@@ -36,6 +37,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
         this.diseases = diseases;
       }
     );
+  }
+
+  onClickLogo() {
+    this.menuService.stepper.next(0);
   }
 
   ngOnInit(): void {}

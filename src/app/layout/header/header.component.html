@@ -1,5 +1,10 @@
 <div class="header">
-  <img src="/assets/icons/logo.png" alt="" class="header__logo" />
+  <img
+    src="/assets/icons/logo.png"
+    alt=""
+    class="header__logo"
+    (click)="onClickLogo()"
+  />
   <div class="header__chosen-options">
     <nz-tag [nzColor]="'green'" *ngFor="let typeOfPlate of typeOfPlates">{{
       typeOfPlate.nombre
