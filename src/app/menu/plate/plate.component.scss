@@ -1,0 +1,31 @@
+.plate {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.plate__title-cards {
+  width: 100%;
+  font-size: 2rem;
+}
+
+.plate__cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.plate__card {
+  margin: 1rem;
+}
+
+.plate__image {
+  height: 200px;
+}
+
+.plate__title-card {
+  text-align: center;
+}

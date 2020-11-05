@@ -1,0 +1,18 @@
+<div class="plate">
+  <nz-divider class="plate__title-cards" nzText="Tipo de Platos"></nz-divider>
+
+  <div class="plate__cards">
+    <div class="plate__card" *ngFor="let plate of plates">
+      <nz-card nzHoverable [nzCover]="coverTemplate">
+        <nz-card-meta
+          class="plate__title-card"
+          [nzTitle]="plate.nombre + ' (' + plate.precio + ')'"
+          [nzDescription]="plate.descripcion"
+        ></nz-card-meta>
+      </nz-card>
+      <ng-template #coverTemplate>
+        <img class="plate__image" [src]="plate.imagen" />
+      </ng-template>
+    </div>
+  </div>
+</div>

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 import { AllergyComponent } from './menu/allergy/allergy.component';
 import { DiseaseComponent } from './menu/disease/disease.component';
+import { PlateComponent } from './menu/plate/plate.component';
 import { TypeOfPlateComponent } from './menu/type-of-plate/type-of-plate.component';
 
 const routes: Routes = [
@@ -24,7 +25,7 @@ const routes: Routes = [
       },
       {
         path: 'recomendacion',
-        component: TypeOfPlateComponent,
+        component: PlateComponent,
       },
     ],
   },
