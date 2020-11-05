@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { MenuService } from 'src/app/core/services/menu.service';
+import { MenuService, Step } from 'src/app/core/services/menu.service';
 
 @Component({
   selector: 'app-footer',
@@ -21,5 +21,9 @@ export class FooterComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.stepperSubscription.unsubscribe();
+  }
+
+  onIndexChange(index) {
+    this.menuService.stepper.next(index);
   }
 }

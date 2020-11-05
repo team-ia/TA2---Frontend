@@ -20,6 +20,10 @@ const routes: Routes = [
         path: 'alergias',
         component: TypeOfPlateComponent,
       },
+      {
+        path: 'recomendacion',
+        component: TypeOfPlateComponent,
+      },
     ],
   },
   {

@@ -1,5 +1,10 @@
 <div class="footer">
-  <nz-steps class="header__steps" [nzCurrent]="step" nzProgressDot>
+  <nz-steps
+    class="header__steps"
+    [nzCurrent]="step"
+    nzProgressDot
+    (nzIndexChange)="onIndexChange($event)"
+  >
     <nz-step nzTitle="Tipo de Plato" nzDescription=""></nz-step>
     <nz-step nzTitle="Enfermedades" nzDescription=""></nz-step>
     <nz-step nzTitle="Alergías" nzDescription=""></nz-step>
