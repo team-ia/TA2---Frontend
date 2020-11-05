@@ -1,17 +1,26 @@
 <div class="allergy">
   <div *ngFor="let typeOfAllergy of typeOfAllergies">
-    <nz-divider [nzText]="typeOfAllergy.nombre"></nz-divider>
-    <carousel>
+    <nz-divider
+      class="allergy__title-cards"
+      [nzText]="typeOfAllergy.nombre"
+    ></nz-divider>
+
+    <div class="allergy__cards">
       <div
-        class="carousel-cell"
+        class="allergy__card"
         *ngFor="let allergy of typeOfAllergy.allergies"
         (click)="onClickAllergy(allergy)"
       >
-        <h4 class="allergy__title-card">
-          {{ allergy.nombre }}
-        </h4>
-        <img [src]="allergy.imagen" />
+        <nz-card nzHoverable [nzCover]="coverTemplate">
+          <nz-card-meta
+            class="allergy__title-card"
+            [nzTitle]="allergy.nombre"
+          ></nz-card-meta>
+        </nz-card>
+        <ng-template #coverTemplate>
+          <img class="allergy__image" [src]="allergy.imagen" />
+        </ng-template>
       </div>
-    </carousel>
+    </div>
   </div>
 </div>

@@ -4,6 +4,33 @@
   overflow-y: auto;
 }
 
+.allergy__title-cards {
+  font-size: 2rem;
+}
+
+.allergy__cards {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
+.allergy__card {
+  margin: 1rem;
+}
+
+.allergy__title-card {
+  text-align: center;
+}
+
+.allergy__image {
+  height: 200px;
+}
+
 .allergy__title-card {
   text-align: center;
 }

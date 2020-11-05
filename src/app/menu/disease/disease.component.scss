@@ -4,6 +4,33 @@
   overflow-y: auto;
 }
 
+.disease__title-cards {
+  font-size: 2rem;
+}
+
+.disease__cards {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
+.disease__card {
+  margin: 1rem;
+}
+
+.disease__title-card {
+  text-align: center;
+}
+
+.disease__image {
+  height: 200px;
+}
+
 .disease__title-card {
   text-align: center;
 }
