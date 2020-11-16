@@ -13,12 +13,12 @@
       <nz-card nzHoverable [nzCover]="coverTemplate">
         <nz-card-meta
           class="plate__title-card"
-          [nzTitle]="plate.nombre + ' (' + plate.precio + ')'"
-          [nzDescription]="plate.descripcion"
+          [nzTitle]="plate.title"
+          [nzDescription]="plate.instructions"
         ></nz-card-meta>
       </nz-card>
       <ng-template #coverTemplate>
-        <img class="plate__image" [src]="plate.imagen" />
+        <img class="plate__image" src="/assets/images/image-not-found.png" />
       </ng-template>
     </div>
   </div>

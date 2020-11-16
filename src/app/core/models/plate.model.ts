@@ -1,6 +1,4 @@
 export interface Plate {
-  nombre?: string;
-  descripcion?: string;
-  precio?: string;
-  imagen?: string;
+  title?: string;
+  instructions?: string;
 }

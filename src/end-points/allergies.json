@@ -1,14 +1,1 @@
-[
-  {
-    "nombre": "Piña",
-    "imagen": "https://picsum.photos/200/200"
-  },
-  {
-    "nombre": "Limón",
-    "imagen": "https://picsum.photos/200/200"
-  },
-  {
-    "nombre": "Pollo",
-    "imagen": "https://picsum.photos/200/300"
-  }
-]
+["Piña", "Limón", "Pollo"]

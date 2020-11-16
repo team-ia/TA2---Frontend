@@ -1,4 +1,4 @@
 export interface TypeOfPlate {
-  nombre?: string;
-  imagen?: string;
+  title?: string;
+  instructions?: string;
 }

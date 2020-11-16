@@ -1,26 +1,26 @@
 [
   {
-    "nombre": "Arroz con pollo",
-    "descripcion": "1/4 de pollo con arroz verde",
-    "precio": "50 soles",
-    "imagen": "https://picsum.photos/200/200"
+    "title": "Arroz con pollo",
+    "instructions": "1/4 de pollo con arroz verde"
   },
   {
-    "nombre": "Arroz con pollo",
-    "descripcion": "1/4 de pollo con arroz verde",
-    "precio": "50 soles",
-    "imagen": "https://picsum.photos/200/200"
+    "title": "Arroz con pollo",
+    "instructions": "1/4 de pollo con arroz verde"
   },
   {
-    "nombre": "Arroz con pollo",
-    "descripcion": "1/4 de pollo con arroz verde",
-    "precio": "50 soles",
-    "imagen": "https://picsum.photos/200/200"
+    "title": "Arroz con pollo",
+    "instructions": "1/4 de pollo con arroz verde"
   },
   {
-    "nombre": "Arroz con pollo",
-    "descripcion": "1/4 de pollo con arroz verde",
-    "precio": "50 soles",
-    "imagen": "https://picsum.photos/200/200"
+    "title": "Arroz con pollo",
+    "instructions": "1/4 de pollo con arroz verde"
+  },
+  {
+    "title": "Arroz con pollo",
+    "instructions": "1/4 de pollo con arroz verde"
+  },
+  {
+    "title": "Arroz con pollo",
+    "instructions": "1/4 de pollo con arroz verde"
   }
 ]

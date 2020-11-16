@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Disease } from '../models/disease.model';
-import { TypeOfDisease } from '../models/type-of-disease.model';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -9,9 +8,18 @@ import { TypeOfDisease } from '../models/type-of-disease.model';
 export class DiseaseService {
   constructor(private httpClient: HttpClient) {}
 
-  async getDiseases(typeOfDiase: TypeOfDisease) {
+  async getDiseases(typeOfDiase: String) {
     return await this.httpClient
-      .get<Disease[]>(`end-points/diases.json?tipo=${typeOfDiase.nombre}`)
+      .get<String[]>(`${environment.API}/end-points/diases.json`)
       .toPromise();
+
+    // return await this.httpClient
+    // .post(
+    //   `${environment.API}/enfermedades`
+    //   , {
+    //     tipo: typeOfDiase,
+    //   }
+    // )
+    // .toPromise();
   }
 }

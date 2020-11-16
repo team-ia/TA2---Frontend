@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Disease } from 'src/app/core/models/disease.model';
-import { TypeOfDisease } from 'src/app/core/models/type-of-disease.model';
+import { DiseaseService } from 'src/app/core/services/disease.service';
 import { MenuService } from 'src/app/core/services/menu.service';
-import { TypeOfDiseaseService } from 'src/app/core/services/type-of-disease.service';
 
 @Component({
   selector: 'app-disease',
@@ -10,25 +8,31 @@ import { TypeOfDiseaseService } from 'src/app/core/services/type-of-disease.serv
   styleUrls: ['./disease.component.scss'],
 })
 export class DiseaseComponent implements OnInit {
-  typeOfDiseases: TypeOfDisease[] = [];
+  typeOfDisease: String;
+  diseases: String[];
 
   constructor(
-    private typeOfDiseaseService: TypeOfDiseaseService,
-    private menuService: MenuService
+    private menuService: MenuService,
+    private diseaseService: DiseaseService
   ) {}
 
   ngOnInit(): void {
-    this.loadTypeOfDiseases();
+    this.loadTypeOfDisease();
+    this.loadDiseases();
   }
 
-  async loadTypeOfDiseases() {
-    this.typeOfDiseases = await this.typeOfDiseaseService.getTypeOfDiseases();
+  loadTypeOfDisease() {
+    this.typeOfDisease = this.menuService.typeOfDiseases.value;
   }
 
-  onClickDisease(diseaseSelection: Disease) {
+  async loadDiseases() {
+    this.diseases = await this.diseaseService.getDiseases(this.typeOfDisease);
+  }
+
+  onClickDisease(diseaseSelection: String) {
     let diseases = this.menuService.diseases.value;
     let indexOfDiseases = diseases.findIndex(
-      (disease) => diseaseSelection.nombre == disease.nombre
+      (disease) => diseaseSelection == disease
     );
     if (indexOfDiseases != -1) {
       diseases.splice(indexOfDiseases, 1);

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { TypeOfPlate } from '../models/type-of-plate.model';
+import { Plate } from '../models/plate.model';
 import { MenuService } from './menu.service';
 
 @Injectable({
@@ -13,31 +13,18 @@ export class PlateService {
   ) {}
 
   async getPlates() {
-    const typeOfPlates = this.menuService.typeOfPlates.value;
-    const typeOfPlate = typeOfPlates[0];
-
     const diseases = this.menuService.diseases.value;
-    const diseasesWithOnlyName = [];
-
-    diseases.forEach((disease) => {
-      diseasesWithOnlyName.push(disease.nombre);
-    });
-
     const allergies = this.menuService.allergies.value;
-    const allergiesWithOnlyName = [];
-
-    allergies.forEach((allergy) => {
-      allergiesWithOnlyName.push(allergy.nombre);
-    });
 
     return await this.httpClient
-      .get<TypeOfPlate[]>(
-        `end-points/plates.json?tipo=${
-          typeOfPlate.nombre
-        }&enfermedades=${diseasesWithOnlyName.join(
-          ','
-        )}&ingredientes=${allergiesWithOnlyName.join(',')}`
-      )
+      .get<Plate[]>(`end-points/plates.json`)
       .toPromise();
+
+    // return await this.httpClient
+    //   .post(`${environment}/platillos/2`, {
+    //     enfermedades: diseases,
+    //     alergias: allergies,
+    //   })
+    //   .toPromise();
   }
 }

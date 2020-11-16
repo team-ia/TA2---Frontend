@@ -6,14 +6,12 @@
     (click)="onClickLogo()"
   />
   <div class="header__chosen-options">
-    <nz-tag [nzColor]="'green'" *ngFor="let typeOfPlate of typeOfPlates">{{
-      typeOfPlate.nombre
-    }}</nz-tag>
+    <nz-tag [nzColor]="'green'">{{ typeOfDisease }}</nz-tag>
     <nz-tag [nzColor]="'red'" *ngFor="let disease of diseases">{{
-      disease.nombre
+      disease
     }}</nz-tag>
     <nz-tag [nzColor]="'orange'" *ngFor="let allergy of allergies">{{
-      allergy.nombre
+      allergy
     }}</nz-tag>
   </div>
 </div>

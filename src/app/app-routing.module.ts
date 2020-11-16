@@ -4,7 +4,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { AllergyComponent } from './menu/allergy/allergy.component';
 import { DiseaseComponent } from './menu/disease/disease.component';
 import { PlateComponent } from './menu/plate/plate.component';
-import { TypeOfPlateComponent } from './menu/type-of-plate/type-of-plate.component';
+import { TypeOfDiseaseComponent } from './menu/type-of-disease/type-of-disease.component';
 
 const routes: Routes = [
   {
@@ -12,8 +12,8 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       {
-        path: 'tipo-de-plato',
-        component: TypeOfPlateComponent,
+        path: 'tipo-de-enfermedad',
+        component: TypeOfDiseaseComponent,
       },
       {
         path: 'enfermedades',
@@ -31,7 +31,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'menu/tipo-de-plato',
+    redirectTo: 'menu/tipo-de-enfermedad',
     pathMatch: 'full',
   },
 ];
