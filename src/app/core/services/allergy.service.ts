@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -9,7 +10,7 @@ export class AllergyService {
 
   async getAllergies() {
     return await this.httpClient
-      .get<String[]>(`end-points/allergies.json`)
+      .get<String[]>(`${environment.API}/ingredients`)
       .toPromise();
   }
 }
