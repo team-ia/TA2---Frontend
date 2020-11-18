@@ -18,7 +18,9 @@
         ></nz-card-meta>
       </nz-card>
       <ng-template #coverTemplate>
-        <img class="plate__image" src="/assets/images/image-not-found.png" />
+      <div class="plate__container">
+        <img class="plate__image" [src]="plate.img" alt="Avatar"/>
+      </div>
       </ng-template>
     </div>
   </div>

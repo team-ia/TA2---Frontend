@@ -28,4 +28,11 @@
 
 .plate__title-card {
   text-align: center;
+  border-radius: 50%;
+}
+
+.plate__container{
+  display: flex;
+  justify-content: center;
+ 
 }
