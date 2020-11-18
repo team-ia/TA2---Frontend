@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { TypeOfDisease } from '../models/type-of-disease.model';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +11,7 @@ export class TypeOfDiseaseService {
 
   async getTypeOfDiseases() {
     return await this.httpClient
-      .get<TypeOfDiseaseService[]>(`${environment.API}/tipo_enfermedades`)
+      .get<TypeOfDisease[]>(`${environment.API}/tipo_enfermedades`)
       .toPromise();
   }
 }
