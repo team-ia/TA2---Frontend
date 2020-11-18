@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { Disease } from '../models/disease.model';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +15,7 @@ export class DiseaseService {
      // .toPromise();
 
      return await this.httpClient
-     .post<String[]>(
+     .post<Disease[]>(
        `${environment.API}/enfermedades`
        , {
         tipo: typeOfDiase,

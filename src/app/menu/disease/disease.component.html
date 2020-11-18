@@ -5,21 +5,23 @@
       [nzText]="typeOfDisease"
     ></nz-divider>
 
-    <div class="disease__cards">
+    <div class="disease__cards"
+    *ngFor="let disease of diseases"
+    >
       <nz-card
         nzHoverable
         [nzCover]="coverTemplate"
-        *ngFor="let disease of diseases"
-        (click)="onClickDisease(disease)"
+        
+        (click)="onClickDisease(disease.nombre)"
         class="disease__card"
       >
         <nz-card-meta
           class="disease__title-card"
-          [nzTitle]="disease"
+          [nzTitle]="disease.nombre"
         ></nz-card-meta>
       </nz-card>
       <ng-template #coverTemplate>
-        <img class="disease__image" src="/assets/images/image-not-found.png" />
+        <img class="disease__image" [src]="disease.img_enfermedad" />
       </ng-template>
     </div>
   </div>

@@ -10,7 +10,7 @@ export class TypeOfDiseaseService {
 
   async getTypeOfDiseases() {
     return await this.httpClient
-      .get<String[]>(`${environment.API}/tipo_enfermedades`)
+      .get<TypeOfDiseaseService[]>(`${environment.API}/tipo_enfermedades`)
       .toPromise();
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Disease } from 'src/app/core/models/disease.model';
 import { DiseaseService } from 'src/app/core/services/disease.service';
 import { MenuService } from 'src/app/core/services/menu.service';
 
@@ -9,7 +10,7 @@ import { MenuService } from 'src/app/core/services/menu.service';
 })
 export class DiseaseComponent implements OnInit {
   typeOfDisease: String;
-  diseases: String[];
+  diseases: Disease[];
 
   constructor(
     private menuService: MenuService,

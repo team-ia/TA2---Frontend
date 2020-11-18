@@ -1,4 +1,4 @@
 export interface Disease {
   nombre?: string;
-  imagen?: string;
+  img_enfermedad?: string;
 }

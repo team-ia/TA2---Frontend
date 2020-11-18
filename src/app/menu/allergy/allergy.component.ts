@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Allergy } from 'src/app/core/models/allergy.model';
 import { AllergyService } from 'src/app/core/services/allergy.service';
 import { MenuService } from 'src/app/core/services/menu.service';
 @Component({
@@ -7,7 +8,7 @@ import { MenuService } from 'src/app/core/services/menu.service';
   styleUrls: ['./allergy.component.scss'],
 })
 export class AllergyComponent implements OnInit {
-  allergies: String[] = [];
+  allergies: Allergy[] = [];
 
   constructor(
     private allergyService: AllergyService,
